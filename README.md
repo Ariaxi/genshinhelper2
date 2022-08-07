@@ -20,9 +20,9 @@ onepush - Push all in One. 一个简单易用的推送包。
 
 之前终端运行 genshinhelper or python -m genshinhelper可以直接运行签到脚本，现在改为将论坛cookie转换为米游币cookie。
 
-#配置文件config.json变化：
+# 配置文件config.json变化：
 
-##新增变量
+## 新增变量
 
 RANDOM_SLEEP_SECS_RANGE：随机延迟休眠秒数范围，单位：秒。设置成"0-0"为取消延迟。
 CHECK_IN_TIME：每日签到时间。该时间和运行环境的时间有关，和时区无关。如果是docker，可以用TZ=Asia/Shanghai设置时区。
@@ -31,7 +31,7 @@ COOKIE_RESIN_TIMER：需要开启原粹树脂检测账号的cookie。
 SHOPTOKEN：微信积分商城的token，通过抓包获取。
 ONEPUSH：推送配置。notifier为推送名字，params为所需参数。详见后文。
 
-##修改变量
+## 修改变量
 
 COOKIE_WEIBO：国际版微博抓包后，请求地址里?后的全部参数。
 例如：
@@ -39,7 +39,7 @@ https://api.weibo.cn/2/xxxxxx?aid=xxx&c=weicoabroad&from=123&gsid=_xxx&i=xxx&lan
 
 COOKIE_WEIBO= aid=xxx&c=weicoabroad&from=123&gsid=_xxx&i=xxx&lang=zh_CN&s=xxx&ua=iPhone12%2C1_iOS14.0.1_Weibo_intl._4330_cell&v_p=59
 
-##移除变量
+## 移除变量
 
 CRON_SIGNIN
 MAX_SLEEP_SECS

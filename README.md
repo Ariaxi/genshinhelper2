@@ -1,4 +1,4 @@
-    ![image](https://user-images.githubusercontent.com/37653613/183275817-0af95293-6466-4be3-9664-c4a6af1564bf.png)
+![image](https://user-images.githubusercontent.com/37653613/183275817-0af95293-6466-4be3-9664-c4a6af1564bf.png)
 
     Genshin Impact Helper
 
@@ -20,9 +20,9 @@
 
     之前终端运行 genshinhelper or python -m genshinhelper可以直接运行签到脚本，现在改为将论坛cookie转换为米游币cookie。
 
-    # 配置文件config.json变化：
+# 配置文件config.json变化：
 
-    ## 新增变量
+## 新增变量
 
     RANDOM_SLEEP_SECS_RANGE：随机延迟休眠秒数范围，单位：秒。设置成"0-0"为取消延迟。
     CHECK_IN_TIME：每日签到时间。该时间和运行环境的时间有关，和时区无关。如果是docker，可以用TZ=Asia/Shanghai设置时区。
@@ -31,7 +31,7 @@
     SHOPTOKEN：微信积分商城的token，通过抓包获取。
     ONEPUSH：推送配置。notifier为推送名字，params为所需参数。详见后文。
 
-    ## 修改变量
+## 修改变量
 
     COOKIE_WEIBO：国际版微博抓包后，请求地址里?后的全部参数。
     例如：
@@ -39,7 +39,7 @@
 
     COOKIE_WEIBO= aid=xxx&c=weicoabroad&from=123&gsid=_xxx&i=xxx&lang=zh_CN&s=xxx&ua=iPhone12%2C1_iOS14.0.1_Weibo_intl._4330_cell&v_p=59
 
-    ## 移除变量
+## 移除变量
 
     CRON_SIGNIN
     MAX_SLEEP_SECS
@@ -66,7 +66,7 @@
     WW_APP_AGENTID
     WW_BOT_KEY
 
-    Features
+## Features
 
     新增 原神原粹树脂溢出提醒
     新增 原神微信积分商城签到
@@ -74,12 +74,12 @@
     新增 社区任务签到支持显示当前米游币
     新增 hoyolab国际服支持显示角色服务器
     新增 hoyolab国际服支持显示旅行者札记Traveler‘s Diary
-    Fixes
-
+    
+## Fixes
     修复 微博超话检测失效
     云原神签到也已支持，需要自己抓包填写CLOUD_GENSHIN变量。
 
-    注意：
+## 注意：
 
     下列参数如果required字段包含 'title' 或 'content'，ONEPUSH变量中都不需要设置。例如serverchan不需要设置 'title'。
     custom方式暂时不支持推送签到结果。
@@ -164,19 +164,19 @@
     以下为 1.7.1 版本教程，请结合更新部分内容食用！！！
     以下为 1.7.1 版本教程，请结合更新部分内容食用！！！
 
-    前言
+## 前言
     原神是少有的游戏本体和签到福利分离的游戏，玩家为了签到还要额外下载米游社 App。
 
     平心而论，目前的每日签到奖励真的不咋地，都知道是蚊子腿。事实上，你完全可以选择无视签到，不签也没啥大的损失；或者选择手动签到，但这样的话哪天忘记打卡了就很头疼。
 
     为了原石、摩拉和紫色经验书等签到奖励，这个项目应运而生，可以实现自动每日签到。
 
-    简介
+## 简介
     genshinhelper(原神签到小助手)，前身为 genshin-impact-helper，可以自动化为你获取原神每日福利
 
 
 
-    特性
+## 特性
     支持订阅推送 可选多种订阅方式，每天将签到结果推送给用户
     支持多个账号 不同账号的 Cookie 值之间用#分隔，如：cookie1#cookie2#cookie3
     天空岛/世界树
@@ -203,7 +203,7 @@
     崩坏3福利补给
     同原神签到
 
-    米游社区任务
+## 米游社区任务
 
     这部分问的小伙伴最多，但是不好明白讲出来，特地设置个隐藏，请见谅哈
     米游社区任务即米游币签到，获取 Cookie 的方法和米游社一样，但注意米游币需要account_id、cookie_token和login_ticket三个字段。
@@ -217,9 +217,10 @@
     转换 Cookie 有 2 种方法：
 
     使用 genshinhelper 命令
-
+'''
     pip install genshinhelper
     python -m genshinhelper
+'''    
     然后填入 Cookie 进行转换
 
     使用 1.7.1 版本云函数
@@ -249,14 +250,14 @@
     复制弹出的Cookies
     Ganyu Cookies Getter
 
-    部署
+## 部署
     项目支持 Docker、PyPI和云函数三种安装方式，请根据实际情况选择相应版本安装。
 
     提示：如果选择 Docker或 PyPI安装方式，请确保已事先安装好了 Docker或 Python3环境
     choose_platform
     choose_platform
 
-    Docker
+## Docker
     PyPI Package
     云函数
     使用以下命令拉取镜像：
@@ -267,7 +268,7 @@
 
     你可以在Docker Hub上找到该仓库。
 
-    订阅
+## 订阅
     支持 Bark App 、
     酷推、钉钉机器人、Discord、iGot聚合推送、pushplus、Server酱、Telegram robot、企业微信应用、企业微信机器人和自定义推送
     单个或多个推送，通过配置环境变量或填写配置文件开启对应推送方式，变量名称列表详见下文 环境变量部分内容。
@@ -287,7 +288,7 @@
         "set_data_sub_title":"",
         "set_data_desp":""
     }
-    JSON 复制
+
     Custom notifier:
         method:                 Required, the request method. Default: post.
         url:                    Required, the full custom push link.
@@ -337,7 +338,7 @@
         "set_data_sub_title":"",
         "set_data_desp":"desp"
     }
-    JSON 复制
+
     提示：若开启订阅推送，无论成功与否，都会收到推送通知。
     配置
     项目有两种使用自定义配置的方式：
@@ -393,7 +394,7 @@
       "COOKIE_MIHOYOBBS": "",
       "DISCORD_WEBHOOK": ""
     }
-    JSON 复制
+
     致谢
     感谢XiaoMiku01的 miyoubiAuto.
     感谢所有为 y1ndan/genshin-impact-helper 项目贡献代码的大佬们以及使用过该项目的小可爱：
@@ -412,34 +413,35 @@
     @qianxu2001
 
 
-    # genshinhelper
+# genshinhelper
 
-    A Python library for miHoYo bbs and HoYoLAB Community.
+A Python library for miHoYo bbs and HoYoLAB Community.
 
-    ## Installation
+## Installation
 
-    Via pip:
+Via pip:
 
-    ```
-    pip install genshinhelper
-    ```
+```
+pip install genshinhelper
+```
 
-    Or via source code:
+Or via source code:
 
-    ```
-    git clone https://github.com/y1ndan/genshinhelper2.git
-    cd genshinhelper2
-    python setup.py install
-    ```
+```
+git clone https://github.com/y1ndan/genshinhelper2.git
+cd genshinhelper2
+python setup.py install
+```
 
-    ## Basic Usage
+## Basic Usage
 
-    ```python
-    import genshinhelper as gh
+```python
+import genshinhelper as gh
 
-    cookie = 'account_id=16393939; cookie_token=jPjdK4yd7oeIifkdYhkFhkkjde00hdUgh'
-    g = gh.Genshin(cookie)
-    roles = g.roles_info
-    print(roles)
-    ```
+cookie = 'account_id=16393939; cookie_token=jPjdK4yd7oeIifkdYhkFhkkjde00hdUgh'
+g = gh.Genshin(cookie)
+roles = g.roles_info
+print(roles)
+```
+
 

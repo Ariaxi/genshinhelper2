@@ -217,10 +217,10 @@
     转换 Cookie 有 2 种方法：
 
     使用 genshinhelper 命令
-'''
+```
     pip install genshinhelper
     python -m genshinhelper
-'''    
+``` 
     然后填入 Cookie 进行转换
 
     使用 1.7.1 版本云函数

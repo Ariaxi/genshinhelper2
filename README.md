@@ -18,7 +18,7 @@
     genshin-checkin-helper - 签到主程序。
     onepush - Push all in One. 一个简单易用的推送包。
 
-    之前终端运行 genshinhelper or python -m genshinhelper可以直接运行签到脚本，现在改为将论坛cookie转换为米游币cookie。
+##之前终端运行 genshinhelper or python -m genshinhelper可以直接运行签到脚本，现在改为将论坛cookie转换为米游币cookie。
 
 # 配置文件config.json变化：
 
@@ -198,7 +198,7 @@
 
     原神签到福利
     米游社：https://bbs.mihoyo.com/ys/
-    Cookie 应包含account_id和cookie_token两个字段
+## Cookie 应包含account_id和cookie_token两个字段
 
     崩坏3福利补给
     同原神签到
